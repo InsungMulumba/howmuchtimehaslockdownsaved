@@ -1,0 +1,14 @@
+@import 'vars.scss';
+
+.navBar {
+    height: 100px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: $container-bg-color--dark;
+    color: white;
+    padding-left: 15px;
+    padding-top: 25px;
+    font-size: xx-large;
+}

@@ -1,16 +1,16 @@
-import React, { Component } from 'react';
-import NavBar from './NavBar'
-import Form from './Form'
+import React from 'react';
+import NavBar from './NavBar';
+import Form from './Form';
 
-class App extends Component {
-  render() {
+export const App = () =>
+ {
     return (
       <div>
         <NavBar/>
         <Form/>
       </div>
-    )
-  }
-}
+    );
+  };
+
 
 export default App;

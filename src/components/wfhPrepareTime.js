@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import Slider from 'rc-slider/lib/Slider';
 import 'rc-slider/assets/index.css';
-import './styles/Form.scss';
+import '../styles/Form.scss';
 
-const wfhPrepareQuestion = <div> How long do you normally take between waking up and starting work during lockdown?</div>
+const wfhPrepareQuestion = <div> How long do you normally take between waking up and starting work during lockdown?</div>;
 
 class wfhPrepareTime extends Component {
   constructor(props) {
@@ -12,15 +12,17 @@ class wfhPrepareTime extends Component {
         value: 5,
       };
     }
+
       onSliderChange = (value) => {
         
         this.setState({
           value,
         });
       };
+
     render(){
       return (
-        <div>
+        <div className="question-section">
           {wfhPrepareQuestion} 
           <Slider
             value={this.state.value}
@@ -29,7 +31,7 @@ class wfhPrepareTime extends Component {
         />           
         <div>{this.state.value} minutes</div> 
       </div>
-        )  
+        );  
     }
 }
 

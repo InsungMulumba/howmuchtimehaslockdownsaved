@@ -14,10 +14,11 @@ const TravelDate = ({lockdownDate, getLockdownDate}) => {
   };
 
   return(
-    <div className="question-section">
+    <div className="container-section">
       {travellingQuestion}
       <DatePicker
-        onChange={date => getLockdownDate(date)}
+        onChange={getLockdownDate}
+        selected={lockdownDate}
         value={lockdownDate}
         className="calendar"
         onChangeRaw={handleDateChangeRaw}

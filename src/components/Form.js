@@ -4,6 +4,7 @@ import PrepareTime from './prepareTime';
 import WfhPrepareTime from './wfhPrepareTime';
 import TravelDate from './travelDate';
 import ResultPage from './resultPage';
+import Contact from './contact';
 import '../styles/Form.scss';
 
 class Form extends Component {
@@ -11,7 +12,7 @@ class Form extends Component {
     super(props);
 
     this.state = {
-      lockdownDate: new Date(2020, 2, 23),
+      lockdownDate: new Date(),
       commuteTimeMinutes: 40,
       prepareTimeMinutes: 20,
       wfhPrepMinutes: 10
@@ -28,20 +29,24 @@ class Form extends Component {
             wMinutes={results.wfhPrepMinutes}
             lockdownStartDate={results.lockdownDate}
           />  
-          <TravelDate lockdownDate={results.lockdownDate}
-          getLockdownDate={(lockdownDate) => this.setState({lockdownDate})}
-          /> 
-           <div className="date-result question-section"> {results.lockdownDate.toDateString()}</div>
-
-          <CommuteTime commuteTimeMinutes={results.commuteTimeMinutes}
-            getCommuteTimeMinutes={(commuteTimeMinutes) => this.setState({commuteTimeMinutes})}
-            />
-          <PrepareTime prepareTimeMinutes={results.prepareTimeMinutes}
-            getPrepareTimeMinutes={(prepareTimeMinutes) => this.setState({prepareTimeMinutes})}
+          <div id="calculator" className="calculator">
+            <TravelDate lockdownDate={results.lockdownDate}
+            getLockdownDate={(lockdownDate) => this.setState({lockdownDate})}
             /> 
-          <WfhPrepareTime wfhPrepMinutes={results.wfhPrepMinutes}
-            getWfhPrepMinutes={(wfhPrepMinutes) => this.setState({wfhPrepMinutes})}
-          />          
+            <div className="date-result container-section"> {results.lockdownDate.toDateString()}</div>
+
+            <CommuteTime commuteTimeMinutes={results.commuteTimeMinutes}
+              getCommuteTimeMinutes={(commuteTimeMinutes) => this.setState({commuteTimeMinutes})}
+              />
+            <PrepareTime prepareTimeMinutes={results.prepareTimeMinutes}
+              getPrepareTimeMinutes={(prepareTimeMinutes) => this.setState({prepareTimeMinutes})}
+              /> 
+            <WfhPrepareTime wfhPrepMinutes={results.wfhPrepMinutes}
+              getWfhPrepMinutes={(wfhPrepMinutes) => this.setState({wfhPrepMinutes})}
+            />   
+          </div>
+       
+          <Contact/>
 
       </div>
     );

@@ -3,28 +3,52 @@
 .container {
     background-color: $container-bg-color;
     position: absolute;
-    height: 100%;
     width: 100%;
-    padding-top: 80px;
+    padding-top: 50px;
     display: flex;
     flex-direction: column;
+    padding-bottom: 100px;
 }
 .date-result {
     margin-top: -20px;
 }
 
-.question-section {
-    width: 80%;
+.calculator {
+    width: 90%;
     margin-bottom: 20px;
     align-self: center;
 }
 
+.container-section {
+    margin-bottom: 20px;
+    font-size: large;
+}
+.result {
+    align-self: center;
+    width: 100%;
+    background-color: aliceblue;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
 .result-statement {
     font-size: 16px;
+    display: flex;
+    text-align: center;
+    margin-bottom: 20px;
+    flex-direction: column;
+    @media(min-width: 767px)
+    {
+        justify-content: center;
+        flex-direction: row;
+        align-items: baseline;
+    }
 }
 
 .result-statistic {
     font-size: 36px;
+    margin-left: 4px;
+    margin-right: 4px;
 }
 
 .calendar {

@@ -7,7 +7,7 @@ const prepareQuestion = <div> How long did it normally take you to get ready and
 
 const PrepareTime = ({prepareTimeMinutes, getPrepareTimeMinutes}) => {
     return (
-    <div className="question-section">
+    <div className="container-section">
           {prepareQuestion} 
         <Slider
           value={prepareTimeMinutes}

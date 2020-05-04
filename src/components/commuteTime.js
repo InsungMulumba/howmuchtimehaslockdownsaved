@@ -7,7 +7,7 @@ const commuteQuestion = <div> How long is your normal commute door to door</div>
 
 const CommuteTime = ({commuteTimeMinutes, getCommuteTimeMinutes}) => {
   return (
-          <div className="question-section">
+          <div className="container-section">
             {commuteQuestion} 
               <Slider
                 value={commuteTimeMinutes}

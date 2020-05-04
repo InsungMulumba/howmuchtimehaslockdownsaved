@@ -75,14 +75,16 @@ const ResultPage = ({ctMinutes,prepMinutes,wMinutes,lockdownStartDate}) => {
     const totalTimeSaved = timeConvert(calculateWorkingDays(lockdownStartDate) * minutesSavedEveryDay);
     
     const dailySavings = <div className="result-statement">
-                            You save <span className="result-statistic"> {minutesSavedEveryDay} minutes</span> every working day 
+                            <span className="statement-prefix">You save</span> 
+                            <span className="result-statistic"> {minutesSavedEveryDay} minutes</span> 
+                            <span className="statement-suffix">every working day</span> 
                         </div>;
     
     const totalSavings = <div className="result-statement">
                             You have saved <span className="result-statistic"> {totalTimeSaved } </span>since start of lockdown
                         </div>;
     return (   
-        <div className="question-section">     
+        <div className="result container-section">     
                 {dailySavings}
                 {totalSavings}
             <div />

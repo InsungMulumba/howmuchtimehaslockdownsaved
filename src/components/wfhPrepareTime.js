@@ -7,14 +7,14 @@ const wfhPrepareQuestion = <div> How long do you normally take between waking up
 
 const WfhPrepareTime = ({wfhPrepMinutes, getWfhPrepMinutes}) => {
   return (
-  <div className="question-section">
+  <div className="container-section">
         {wfhPrepareQuestion} 
       <Slider
         value={wfhPrepMinutes}
         onChange={getWfhPrepMinutes}
         step={5}
         min={5}
-        max={60}
+        max={45}
       />           
     <div>{wfhPrepMinutes} minutes</div> 
     </div>

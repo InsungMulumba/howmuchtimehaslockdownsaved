@@ -1,7 +1,7 @@
 @import 'vars.scss';
 
-.navBar {
-    height: 60px;
+.navbar {
+    height: 50px;
     width: 100%;
     position: absolute;
     top: 0;
@@ -9,5 +9,26 @@
     background-color: $container-bg-color--dark;
     color: white;
     z-index: 999;
-    font-size: large;
+    font-size: x-large;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    margin-left: 16px;
+  }
+
+a:hover {
+    color: lightblue;
+  }
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    height: 40px;
+    padding: 8px 8px 0 8px;
 }

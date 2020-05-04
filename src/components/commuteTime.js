@@ -10,8 +10,11 @@ const CommuteTime = ({commuteTimeMinutes, getCommuteTimeMinutes}) => {
           <div className="question-section">
             {commuteQuestion} 
               <Slider
-              value={commuteTimeMinutes}
-              onChange={getCommuteTimeMinutes}
+                value={commuteTimeMinutes}
+                onChange={getCommuteTimeMinutes}
+                step={5}
+                min={5}
+                max={120}
               />           
             <div> {commuteTimeMinutes} minutes</div> 
           </div>

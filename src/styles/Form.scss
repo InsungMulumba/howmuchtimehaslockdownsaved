@@ -6,9 +6,30 @@
     height: 100%;
     width: 100%;
     padding-top: 80px;
+    display: flex;
+    flex-direction: column;
+}
+.date-result {
+    margin-top: -20px;
 }
 
 .question-section {
-    width: 50%;
-    margin-left: 20px;
+    width: 80%;
+    margin-bottom: 20px;
+    align-self: center;
+}
+
+.result-statement {
+    font-size: 16px;
+}
+
+.result-statistic {
+    font-size: 36px;
+}
+
+.calendar {
+    width: 50px;
+    height: 50px;
+    background: url('../assets/calendar.png') no-repeat;
+    background-size: contain;
 }

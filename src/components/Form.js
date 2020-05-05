@@ -51,9 +51,7 @@ class Form extends Component {
               onDayClick={this.handleDayClick}
             />
             <p>
-              {results.selectedDay
-                ? results.selectedDay.toDateString()
-                : 'Please select a day'}
+              {results.selectedDay.toDateString()}
             </p>
 
             <CommuteTime commuteTimeMinutes={results.commuteTimeMinutes}

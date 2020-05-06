@@ -5,13 +5,14 @@ import '../styles/Form.scss';
 
 const travellingQuestion = <div> What day did you stop travelling to work?</div>;
 const earliestStartOfLockdown = new Date(2020, 0, 1);
+const today = new Date();
 
 
 const TravelDate = ({lockdownDate, getLockdownDate}) => {
   
-  const handleDateChangeRaw = (e) => {
-    e.preventDefault();
-  };
+  // const handleDateChangeRaw = (e) => {
+  //   e.preventDefault();
+  // };
 
   return(
     <div className="container-section">
@@ -19,10 +20,10 @@ const TravelDate = ({lockdownDate, getLockdownDate}) => {
       <DatePicker
         onChange={getLockdownDate}
         selected={lockdownDate}
-        value={lockdownDate}
-        className="calendar"
-        onChangeRaw={handleDateChangeRaw}
-        maxDate={new Date()}
+        // value={lockdownDate}
+        // className="calendar"
+        // onChangeRaw={handleDateChangeRaw}
+        maxDate={today}
         minDate={earliestStartOfLockdown}
       />
        

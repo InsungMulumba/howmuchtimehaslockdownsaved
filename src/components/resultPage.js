@@ -54,7 +54,7 @@ function timeConvert(n) {
     const rhours = Math.floor(hours);
     const minutes = (hours - rhours) * 60;
     const rminutes = Math.round(minutes);
-    return `${ rhours  } hour(s) and ${  rminutes  } minute(s)`;
+    return `${ Math.abs(rhours)  } hour(s) and ${  rminutes  } minute(s)`;
 };
 
 const ResultPage = ({departCommuteDuration,returnCommuteDuration,prepareMinutes,wPrepareMinutes,lockdownStartDate}) => {
@@ -62,14 +62,20 @@ const ResultPage = ({departCommuteDuration,returnCommuteDuration,prepareMinutes,
     const today = new Date();
     const totalTimeSaved = timeConvert((numberOfDays(lockdownStartDate,today)) * minutesSavedEveryDay);
 
+    const dailyStatementPrefix = minutesSavedEveryDay >= 0 ? <span className="statement-prefix">You save</span> :
+     <span className="statement-prefix">You lose</span>;
+
+    const cumulativeStatementPrefix = minutesSavedEveryDay >= 0 ? <span> You have saved </span> : <span> You have lost </span>; 
+
+
     const dailySavings = <div className="result-statement" id="Result">
-                            <span className="statement-prefix">You save</span>
-                            <span className="result-statistic"> {minutesSavedEveryDay} minutes</span>
+                            {dailyStatementPrefix}
+                            <span className="result-statistic"> {Math.abs(minutesSavedEveryDay)} minutes</span>
                             <span className="statement-suffix">every working day</span>
                         </div>;
 
     const totalSavings = <div className="result-statement">
-                            You have saved <span className="result-statistic"> {totalTimeSaved } </span>since start of lockdown
+                            {cumulativeStatementPrefix} <span className="result-statistic"> {totalTimeSaved } </span>since start of lockdown
                         </div>;
     return (
         <div className="result container-section">

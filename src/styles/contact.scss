@@ -1,7 +1,13 @@
 @import 'vars.scss';
 
 .contact {
+    margin-top: 40px;
     width: 90%;
     align-self: center;
-    font-size: x-large;
+    font-size: large;
+}
+
+.quote {
+    font-style: italic;
+    font-size: medium;
 }

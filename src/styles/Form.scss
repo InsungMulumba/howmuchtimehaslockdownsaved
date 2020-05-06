@@ -20,8 +20,9 @@
 }
 
 .container-section {
-    margin-bottom: 20px;
+    margin-bottom: 35px;
     font-size: large;
+    font-family: Lato, sans-serif;
 }
 .result {
     align-self: center;
@@ -39,6 +40,7 @@
     flex-direction: column;
     @media(min-width: 767px)
     {
+        font-size: 20px;
         justify-content: center;
         flex-direction: row;
         align-items: baseline;
@@ -49,6 +51,10 @@
     font-size: 36px;
     margin-left: 4px;
     margin-right: 4px;
+    @media(min-width: 767px)
+    {
+        font-size: 42px;
+    }
 }
 
 .calendar {
@@ -60,8 +66,12 @@
 .anchor-button {
     background-color: $container-bg-color--dark;
     text-decoration: none;
-    margin-left: 30px;
-    font-size: large;
+    margin-left: 20px;
+    font-size: x-large;
     color: white;
-    padding: 4px;
+    padding: 8px;
+    @media(min-width: 767px)
+    {
+        margin-left: 48px;
+    }
 }

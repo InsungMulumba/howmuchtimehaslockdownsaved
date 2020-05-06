@@ -3,7 +3,6 @@ import {
   Link,
   BrowserRouter
 } from "react-router-dom";
-// import ContactPage from './components/contact';
 import './styles/NavBar.scss';
 
 

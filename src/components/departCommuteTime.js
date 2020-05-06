@@ -3,20 +3,19 @@ import Slider from 'rc-slider/lib/Slider';
 import 'rc-slider/assets/index.css';
 
 const commuteQuestion = <div> How long is your normal commute door to door</div>;
-// const defaultMinutes = 5;
 
-const CommuteTime = ({commuteTimeMinutes, getCommuteTimeMinutes}) => {
+const CommuteTime = ({departCommuteTimeMinutes,  getdepartCommuteTimeMinutes}) => {
   return (
           <div className="container-section">
             {commuteQuestion} 
               <Slider
-                value={commuteTimeMinutes}
-                onChange={getCommuteTimeMinutes}
+                value={departCommuteTimeMinutes}
+                onChange={getdepartCommuteTimeMinutes}
                 step={5}
                 min={5}
                 max={120}
               />           
-            <div> {commuteTimeMinutes} minutes</div> 
+            <div> {departCommuteTimeMinutes} minutes</div> 
           </div>
         );  
     };

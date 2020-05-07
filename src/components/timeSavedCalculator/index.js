@@ -38,8 +38,8 @@ export const getNumberOfDays = (oldD,newD,daysThatTheyDontCommute) => {
         }
         i+=1;     
     }
-    console.log(gapFromToday);
-    console.log(`${nwd} non commuting days`);
+    // console.log(gapFromToday);
+    // console.log(`${nwd} non commuting days`);
 
     return (gapFromToday-nwd);
 };

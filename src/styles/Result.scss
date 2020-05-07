@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+.social-buttons-container {
+    direction: rtl;
+    margin-top: 100px;
+}
+.social-button{
+    background-color: transparent;
+    border: none;
+    padding: 0px;
+    font: 'Lato', sans-serif;
+    color: inherit;
+    cursor: pointer;
+}

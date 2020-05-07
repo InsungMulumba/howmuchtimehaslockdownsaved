@@ -4,7 +4,6 @@ import {
 } from "react-router-dom";
 import './styles/NavBar.scss';
 
-// const resultAnchor = <li><Link to="#Result"> Result</Link></li>;
 const calcAnchor = <li><a href="#calculator"> Calculate</a></li>;
 const contact = <li><a href="#contact">Contact</a></li>;
 

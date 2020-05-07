@@ -11,7 +11,6 @@ const contact = <li><a href="#contact">Contact</a></li>;
 const navList =
   <ul>
      <BrowserRouter>
-      {/* {resultAnchor} */}
       {calcAnchor}
       {contact}
      </BrowserRouter>

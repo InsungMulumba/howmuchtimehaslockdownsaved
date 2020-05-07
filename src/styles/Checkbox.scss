@@ -1,0 +1,58 @@
+@import 'vars.scss';
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+.checkboxes-container {
+    display: flex;
+    flex-direction: column;
+    @media(min-width: 767px)
+    {
+        flex-direction: row;
+    }
+}
+
+.form-check {
+    @media(min-width: 767px)
+    {
+        margin-right: 6px;
+    }
+}
+.form-check-input {
+    appearance: none;
+    background-color: $container-bg-color--dark;
+	border: 1px solid #cacece;
+    padding: 9px;
+    margin: 0;
+	border-radius: 3px;
+	display: inline-block;
+    position: relative;
+    height: 20px;
+}
+
+.form-check-input:checked {
+	background-color: $container-bg-color--dark;
+	border: 1px solid #adb8c0;
+	// box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1);
+	color: white;
+}
+
+.form-check-input:checked:after {
+	content: '\2714';
+	font-size: 14px;
+	position: absolute;
+	top: 0px;
+	left: 3px;
+	color: white;
+}
+.day-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 4px;
+}
+
+.day-name {
+    margin: 0;
+    margin-left: 6px;
+    font-size: large;
+    font-family: 'Lato', sans-serif;
+}

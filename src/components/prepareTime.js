@@ -3,11 +3,11 @@ import Slider from 'rc-slider/lib/Slider';
 import 'rc-slider/assets/index.css';
 import '../styles/Form.scss';
 
-const prepareQuestion = <div> How long did it normally take you to get ready and leave for work in the morning?</div>;
+const prepareQuestion = <div className="question-text"> How long did it normally take you to get ready and leave for work in the morning?</div>;
 
 const PrepareTime = ({prepareTimeMinutes, getPrepareTimeMinutes}) => {
     return (
-    <div className="container-section">
+    <div className="question-section">
           {prepareQuestion} 
         <Slider
           value={prepareTimeMinutes}

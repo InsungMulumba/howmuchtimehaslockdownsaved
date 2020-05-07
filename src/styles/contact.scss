@@ -1,7 +1,23 @@
 @import 'vars.scss';
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
 
-.contact {
-    width: 90%;
+
+.contact-container {
+    margin-top: 80px;
     align-self: center;
-    font-size: x-large;
+    font-size: large;
+    font-family: 'Lato', sans-serif;
+    background-color: $container-bg-color--dark;
+    color: white;
+
+    a:visited { text-decoration-style: none; color:inherit; }
+}
+
+.contact-text {
+    padding: 4px 20px;
+}
+.quote {
+    padding: 4px 20px;
+    font-style: italic;
+    font-size: small;
 }

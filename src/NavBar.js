@@ -1,20 +1,17 @@
 import React from 'react';
 import {
-  Link,
   BrowserRouter
 } from "react-router-dom";
-// import ContactPage from './components/contact';
 import './styles/NavBar.scss';
 
-
-const resultAnchor = <li><Link to="#Result"> Result</Link></li>;
-const calcAnchor = <li><Link to="#Calculator"> Calculator</Link></li>;
+// const resultAnchor = <li><Link to="#Result"> Result</Link></li>;
+const calcAnchor = <li><a href="#calculator"> Calculate</a></li>;
 const contact = <li><a href="#contact">Contact</a></li>;
 
 const navList =
   <ul>
      <BrowserRouter>
-      {resultAnchor}
+      {/* {resultAnchor} */}
       {calcAnchor}
       {contact}
      </BrowserRouter>

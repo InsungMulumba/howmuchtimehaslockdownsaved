@@ -1,14 +1,15 @@
 @import 'vars.scss';
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
 
 .container {
     background-color: $container-bg-color;
     position: absolute;
     width: 100%;
-    padding-top: 50px;
+    padding-top: 40px;
     display: flex;
     flex-direction: column;
-    padding-bottom: 100px;
 }
+
 .date-result {
     margin-top: -20px;
 }
@@ -19,9 +20,8 @@
     align-self: center;
 }
 
-.container-section {
-    margin-bottom: 20px;
-    font-size: large;
+.question-section {
+    margin-bottom: 35px;
 }
 .result {
     align-self: center;
@@ -35,10 +35,11 @@
     font-size: 16px;
     display: flex;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 35px;
     flex-direction: column;
     @media(min-width: 767px)
     {
+        font-size: 20px;
         justify-content: center;
         flex-direction: row;
         align-items: baseline;
@@ -49,11 +50,35 @@
     font-size: 36px;
     margin-left: 4px;
     margin-right: 4px;
+    @media(min-width: 767px)
+    {
+        font-size: 42px;
+    }
+}
+
+.question-text{
+    font-size: large;
+    font-family: 'Lato', sans-serif;
+    margin-bottom: 5px;
 }
 
 .calendar {
     width: 50px;
     height: 50px;
-    background: url('../assets/calendar.png') no-repeat;
     background-size: contain;
 }
+
+.anchor-button {
+    background-color: $container-bg-color--dark;
+    text-decoration: none;
+    margin-left: 20px;
+    border-radius: 10px;
+    font-size: x-large;
+    color: white;
+    padding: 8px;
+    @media(min-width: 767px)
+    {
+        margin-left: 48px;
+    }
+}
+

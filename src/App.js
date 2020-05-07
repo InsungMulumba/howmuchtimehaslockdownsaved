@@ -1,6 +1,6 @@
 import React from 'react';
-import NavBar from '../NavBar';
-import Form from './Form';
+import NavBar from './NavBar';
+import Form from './components/Form';
 
 export const App = () =>
  {

@@ -5,7 +5,7 @@ import {
 import './styles/NavBar.scss';
 
 const calcAnchor = <li><a href="#calculator"> Calculate</a></li>;
-const contact = <li><a href="#contact">Contact</a></li>;
+const contact = <li><a href="#contact"> Contact</a></li>;
 
 const navList =
   <ul>

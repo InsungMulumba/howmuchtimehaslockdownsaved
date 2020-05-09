@@ -22,7 +22,7 @@ const ResultPage = ({departCommuteDuration,returnCommuteDuration,prepareMinutes,
     const today = new Date();
     const active = _.keys(_.omitBy(selectedDays));
     const totalTimeSaved = timeConvert((getNumberOfDays(lockdownStartDate,today,active)) * minutesSavedEveryDay);
-    const socialURL="https://howmuchtimehaslockdownsaved.herokuapp.com";
+    const socialURL="https://timesavedinlockdown.com";
     const socialText=`I have saved ${totalTimeSaved } since lockdown started, click here to find out how much you've saved`;
 
     const dailyStatementPrefix = minutesSavedEveryDay >= 0 ? <span className="statement-prefix">You save</span> :

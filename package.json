@@ -10,6 +10,7 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "avataaars": "^1.2.1",
     "express": "^4.17.1",
     "express-favicon": "^2.0.1",
     "lodash": "^4.17.15",
@@ -26,7 +27,7 @@
     "react-share": "^4.1.0"
   },
   "scripts": {
-    "start": "node server.js",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

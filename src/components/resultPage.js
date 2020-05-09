@@ -2,14 +2,7 @@
 
 import React from 'react';
 import _ from 'lodash';
-import {
-    FacebookShareButton,
-    WhatsappShareButton,
-    FacebookIcon,
-    WhatsappIcon,
-    TwitterShareButton,
-    TwitterIcon
-  } from 'react-share';
+import SocialButtons from './SocialButtons';
 import '../styles/Form.scss';
 import '../styles/Result.scss';
 
@@ -22,8 +15,6 @@ const ResultPage = ({departCommuteDuration,returnCommuteDuration,prepareMinutes,
     const today = new Date();
     const active = _.keys(_.omitBy(selectedDays));
     const totalTimeSaved = timeConvert((getNumberOfDays(lockdownStartDate,today,active)) * minutesSavedEveryDay);
-    const socialURL="https://timesavedinlockdown.com";
-    const socialText=`I have saved ${totalTimeSaved } since lockdown started, click here to find out how much you've saved`;
 
     const dailyStatementPrefix = minutesSavedEveryDay >= 0 ? <span className="statement-prefix">You save</span> :
      <span className="statement-prefix">You lose</span>;
@@ -42,34 +33,11 @@ const ResultPage = ({departCommuteDuration,returnCommuteDuration,prepareMinutes,
                         </div>;
     return (
         <div className="result question-section">
+            {/* <div className="result--sticky"> */}
                 {dailySavings}
                 {totalSavings}
-            <div className="social-buttons-container">
-            <FacebookShareButton
-                url={socialURL}
-                quote={`I have saved ${totalTimeSaved } since lockdown started, click here to find out how much you've saved`}
-                className="social-button"
-            >
-                <FacebookIcon size={32} round />
-            </FacebookShareButton>
-
-            <WhatsappShareButton
-                url={socialURL}
-                title={socialText}
-                separator=": "
-                className="social-button"
-            >
-                <WhatsappIcon size={32} round />
-            </WhatsappShareButton>
-
-            <TwitterShareButton
-                url={socialURL}
-                title={socialText}
-                className="social-button"
-            >
-            <TwitterIcon size={32} round />
-            </TwitterShareButton>
-            </div>
+            {/* </div> */}
+            <SocialButtons totalTimeSaved = {totalTimeSaved}/>
 
         </div>
       );

@@ -3,7 +3,6 @@
 
 
 .contact-container {
-    margin-top: 80px;
     align-self: center;
     font-size: large;
     font-family: 'Lato', sans-serif;
@@ -21,3 +20,18 @@
     font-style: italic;
     font-size: small;
 }
+
+.contact-info {
+    display: flex;
+
+    svg {
+        height: 120px;
+        margin-right: 15px;  
+        display: none;
+        @media(min-width: 767px) {
+            display: block;
+        }
+        display: none;  
+    }
+}
+

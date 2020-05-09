@@ -27,17 +27,21 @@
     align-self: center;
     width: 100%;
     background-color: aliceblue;
-    padding-top: 50px;
+    padding-top: 20px;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    z-index: 999;
 }
 
 .result-statement {
     font-size: 16px;
-    display: flex;
     text-align: center;
-    margin-bottom: 35px;
+    margin-bottom: 15px;
     flex-direction: column;
     @media(min-width: 767px)
     {
+        display: flex;
         font-size: 20px;
         justify-content: center;
         flex-direction: row;
@@ -46,12 +50,14 @@
 }
 
 .result-statistic {
-    font-size: 36px;
+    font-size: 16px;
+    font-weight: 600;
     margin-left: 4px;
     margin-right: 4px;
+    color: darkblue;
     @media(min-width: 767px)
     {
-        font-size: 42px;
+        font-size: 36px;
     }
 }
 

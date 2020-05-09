@@ -61,7 +61,7 @@ class Form extends Component {
 
   render() {
     const results = this.state;
-    const resultAnchor = <div><a href="#Result" className="anchor-button"> Result</a></div>;
+    // const resultAnchor = <div><a href="#Result" className="anchor-button"> Result</a></div>;
     return (
       <div className="container">   
         <ResultPage 
@@ -99,7 +99,7 @@ class Form extends Component {
         </div>
 
       </div>
-            {resultAnchor}
+            {/* {resultAnchor} */}
        
           <Contact/>
 

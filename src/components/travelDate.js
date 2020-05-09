@@ -20,6 +20,7 @@ const TravelDate = ({lockdownDate, getLockdownDate}) => {
       <DatePicker
         onChange={getLockdownDate}
         selected={lockdownDate}
+        dateFormat="dd/MM/yyyy"
         locale="en-GB"
         // value={lockdownDate}
         // className="calendar"

@@ -6,7 +6,7 @@
     align-self: center;
     font-size: large;
     font-family: 'Lato', sans-serif;
-    background-color: $container-bg-color--dark;
+    background-color: $main-theme--dark;
     color: white;
 
     a:visited { text-decoration-style: none; color:inherit; }
@@ -26,12 +26,10 @@
 
     svg {
         height: 120px;
-        margin-right: 15px;  
         display: none;
         @media(min-width: 767px) {
             display: block;
         }
-        display: none;  
     }
 }
 

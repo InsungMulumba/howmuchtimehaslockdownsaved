@@ -1,12 +1,10 @@
 /* eslint-disable no-console */
 
-import React from 'react';
+import React, { useState }from 'react';
 import _ from 'lodash';
 import SocialButtons from './SocialButtons';
 import '../styles/Form.scss';
 import '../styles/Result.scss';
-
-// howmuchtimehaslockdownsaved.herokuapp.com
   
 import { getMinutesDifference, getNumberOfDays, timeConvert } from './timeSavedCalculator/index'; 
 
@@ -31,13 +29,15 @@ const ResultPage = ({departCommuteDuration,returnCommuteDuration,prepareMinutes,
     const totalSavings = <div className="result-statement">
                             {cumulativeStatementPrefix} <span className="result-statistic"> {totalTimeSaved } </span> <span className="statement-suffix"> since start of lockdown</span>
                         </div>;
+
+    const [timeSavedResult] = useState(totalTimeSaved);
     return (
         <div className="result question-section">
             {/* <div className="result--sticky"> */}
                 {dailySavings}
                 {totalSavings}
             {/* </div> */}
-            <SocialButtons totalTimeSaved = {totalTimeSaved}/>
+            <SocialButtons totalTimeSaved = {timeSavedResult}/>
 
         </div>
       );

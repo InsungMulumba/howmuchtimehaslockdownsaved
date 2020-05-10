@@ -1,9 +1,10 @@
+/* eslint-disable jsx-a11y/label-has-associated-control */
 import React from "react";
 import '../styles/Checkbox.scss';
 
 const Checkbox = ({ label, isSelected, onCheckboxChange }) => (
   <div className="form-check">
-    <div className="day-container">
+    <label className="day-container">
       <input
         type="checkbox"
         name={label}
@@ -12,7 +13,7 @@ const Checkbox = ({ label, isSelected, onCheckboxChange }) => (
         className="form-check-input"
       />
       <p className="day-name"> {label}</p>
-    </div>
+    </label>
   </div>
 );
 

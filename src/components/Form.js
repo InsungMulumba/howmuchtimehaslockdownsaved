@@ -98,9 +98,7 @@ class Form extends Component {
           </div>
         </div>
 
-      </div>
-            {/* {resultAnchor} */}
-       
+      </div>      
           <Contact/>
 
       </div>

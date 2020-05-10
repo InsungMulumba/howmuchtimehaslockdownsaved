@@ -20,7 +20,7 @@ const Contact = () =>
                 mouthType='Twinkle'
                 skinColor='Black'
             />
-            <p className="contact-text">I'm a Front-End developer living and working in London, I wrote this project using ReactJS and SASS. Any questions or if you'd like to have a look at the code feel free to <a href="https://www.linkedin.com/in/insung-mulumba-452849a6/">connect with me on LinkedIn</a></p>
+            <p className="contact-text">I'm a Front-End developer living and working in London, this project was written using ReactJS, SASS and Jest with Heroku used for deployment. Any questions/comments/suggestions or if you'd like to have a look at the code feel free to <a href="https://www.linkedin.com/in/insung-mulumba-452849a6/">connect with me on LinkedIn</a></p>
             </div>
             <p className="quote"> "It’s not that we have little time, but more that we waste a good deal of it." <br /> Seneca </p>
         </div>

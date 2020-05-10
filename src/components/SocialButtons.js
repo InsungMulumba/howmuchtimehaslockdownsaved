@@ -11,7 +11,7 @@ import '../styles/Form.scss';
 import '../styles/Result.scss';
 
 const SocialButtons = ({totalTimeSaved}) => {
-    const socialURL="http://timesavedinlockdown.com";
+    const socialURL="www.timesavedinlockdown.com";
     const socialText=`I have saved ${totalTimeSaved } since lockdown started, click here to find out how much you've saved`;
 
     return(

@@ -9,7 +9,11 @@
     background-color: $main-theme--dark;
     color: white;
 
-    a:visited { text-decoration-style: none; color:inherit; }
+    a {
+        color: white;
+    }
+    a:visited { 
+        color:white; }
 }
 
 .contact-text {

@@ -5,9 +5,12 @@
     background-color: $main-theme;
     position: absolute;
     width: 100%;
-    padding-top: 40px;
+    top: 150px;
     display: flex;
     flex-direction: column;
+    @media (min-width: 414px) {
+        top: 215px;
+    }
 }
 
 .date-result {
@@ -27,7 +30,6 @@
     align-self: center;
     width: 100%;
     background-color: aliceblue;
-    padding-top: 20px;
     position: -webkit-sticky; /* Safari */
     position: sticky;
     top: 0;
@@ -39,10 +41,11 @@
     text-align: center;
     margin-bottom: 15px;
     flex-direction: column;
+    padding-left: 10px;
+    padding-right: 10px;
     @media(min-width: 767px)
     {
         display: flex;
-        font-size: 20px;
         justify-content: center;
         flex-direction: row;
         align-items: baseline;
@@ -73,19 +76,5 @@
     width: 50px;
     height: 50px;
     background-size: contain;
-}
-
-.anchor-button {
-    background-color: $main-theme--dark;
-    text-decoration: none;
-    margin-left: 20px;
-    border-radius: 10px;
-    font-size: x-large;
-    color: white;
-    padding: 8px;
-    @media(min-width: 767px)
-    {
-        margin-left: 48px;
-    }
 }
 

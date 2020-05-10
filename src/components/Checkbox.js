@@ -3,18 +3,16 @@ import React from "react";
 import '../styles/Checkbox.scss';
 
 const Checkbox = ({ label, isSelected, onCheckboxChange }) => (
-  <div className="form-check">
-    <label className="day-container">
+  <label className="custom-checkbox">
+    
       <input
         type="checkbox"
         name={label}
         checked={isSelected}
         onChange={onCheckboxChange}
-        className="form-check-input"
       />
-      <p className="day-name"> {label}</p>
-    </label>
-  </div>
+    <span>{label}</span>
+  </label>
 );
 
 export default Checkbox;

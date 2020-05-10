@@ -10,10 +10,6 @@ const today = new Date();
 
 const TravelDate = ({lockdownDate, getLockdownDate}) => {
   
-  // const handleDateChangeRaw = (e) => {
-  //   e.preventDefault();
-  // };
-
   return(
     <div className="question-section">
       {travellingQuestion}
@@ -21,10 +17,6 @@ const TravelDate = ({lockdownDate, getLockdownDate}) => {
         onChange={getLockdownDate}
         selected={lockdownDate}
         dateFormat="dd/MM/yyyy"
-        locale="en-GB"
-        // value={lockdownDate}
-        // className="calendar"
-        // onChangeRaw={handleDateChangeRaw}
         maxDate={today}
         minDate={earliestStartOfLockdown}
       />

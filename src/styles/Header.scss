@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+@import 'vars.scss';
+
+
+.header {
+    top: 40px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: aliceblue;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    @media (min-width: 540px) {
+        padding-bottom: 40px;
+    }
+
+    h1 {
+        font-size: 24px;
+        color: $main-theme--dark;
+        margin: 0;
+        margin-bottom: 10px;
+        @media (min-width: 767px) {
+            font-size: 32px;
+        }
+    }
+
+    span {
+        display: none;
+        width: 90%;
+        border-bottom: 1px solid lightgrey;
+        text-align: center;
+        @media (min-width: 414px) {
+            display: block;
+            padding-bottom: 10px;
+        }
+
+    }
+}
+.logo {
+    width: 50px;
+}

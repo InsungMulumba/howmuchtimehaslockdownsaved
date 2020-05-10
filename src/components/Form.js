@@ -7,8 +7,8 @@ import ReturnCommuteTime from './returnCommuteTime';
 import PrepareTime from './prepareTime';
 import WfhPrepareTime from './wfhPrepareTime';
 import ResultPage from './resultPage';
-import Contact from './contact';
 import TravelDate from './travelDate';
+import Contact from './contact';
 
 import '../styles/Form.scss';
 
@@ -99,7 +99,8 @@ class Form extends Component {
         </div>
 
       </div>      
-          <Contact/>
+      <Contact/>
+
 
       </div>
     );

@@ -2,7 +2,15 @@
 
 .social-buttons-container {
     direction: rtl;
-    margin-top: 20px;
+    top: 90px;
+    right: 5px;
+    position: absolute;
+    @media (min-width: 360px) {
+        top: 65px;
+    }
+    @media (min-width: 414px) {
+        top: 5px;  
+    }
 }
 .social-button{
     background-color: transparent;

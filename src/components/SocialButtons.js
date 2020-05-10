@@ -21,7 +21,7 @@ const SocialButtons = ({totalTimeSaved}) => {
             quote={`I have saved ${totalTimeSaved } since lockdown started, click here to find out how much you've saved`}
             className="social-button"
         >
-            <FacebookIcon size={32} round />
+            <FacebookIcon size={24} round />
         </FacebookShareButton>
         
         <WhatsappShareButton
@@ -30,7 +30,7 @@ const SocialButtons = ({totalTimeSaved}) => {
             separator=": "
             className="social-button"
         >
-            <WhatsappIcon size={32} round />
+            <WhatsappIcon size={24} round />
         </WhatsappShareButton>
         
         <TwitterShareButton
@@ -38,12 +38,9 @@ const SocialButtons = ({totalTimeSaved}) => {
             title={socialText}
             className="social-button"
         >
-        <TwitterIcon size={32} round />
+        <TwitterIcon size={24} round />
         </TwitterShareButton>
         </div>
     );
-
   };
-
-
 export default SocialButtons;

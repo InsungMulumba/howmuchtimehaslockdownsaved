@@ -33,12 +33,9 @@ const ResultPage = ({departCommuteDuration,returnCommuteDuration,prepareMinutes,
     const [timeSavedResult] = useState(totalTimeSaved);
     return (
         <div className="result question-section">
-            {/* <div className="result--sticky"> */}
-                {dailySavings}
-                {totalSavings}
-            {/* </div> */}
             <SocialButtons totalTimeSaved = {timeSavedResult}/>
-
+            {dailySavings}
+            {totalSavings}
         </div>
       );
 };

@@ -11,6 +11,10 @@
     @media (min-width: 414px) {
         top: 215px;
     }
+
+    .react-datepicker-popper {
+        z-index: 999;
+    }
 }
 
 .date-result {
@@ -77,4 +81,3 @@
     height: 50px;
     background-size: contain;
 }
-

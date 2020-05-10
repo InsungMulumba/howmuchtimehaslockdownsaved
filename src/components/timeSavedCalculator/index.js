@@ -19,29 +19,33 @@ const isBankHoliday = (date,month) => {
  };
 
 export const getNumberOfDays = (oldD,newD,daysThatTheyDontCommute) => {
+    // console.log(daysThatTheyDontCommute);
     const t2 = newD.getTime();
     const t1 = oldD.getTime();
     const gapFromToday = Math.ceil((t2-t1)/(24*3600*1000)+1);
-    const dateArray = [];
     let i=0;
-    let nwd = 0;
+    let nonWorkingDays = 0;
 
     while(i<=gapFromToday)
     {
-        const xx = t1+((24*3600*1000)*i);
-        const yy = new Date(xx);
-        dateArray.push(`${yy.getFullYear()}-${yy.getMonth()+1}-${yy.getDate()}`);
+        const dateThatCommutingEnded = t1+((24*3600*1000)*i);
+        const dayBeingChecked = new Date(dateThatCommutingEnded);
         // console.log(yy.toLocaleString('en-gb', { weekday:  'long'}));
-        const thisDayInText = yy.toLocaleString('en-gb', { weekday:  'long'});
-        if(daysThatTheyDontCommute.includes(thisDayInText) || isBankHoliday(yy.getDate, yy.getMonth)){
-            nwd+=1;
+        const thisDayInText = dayBeingChecked.toLocaleString('en-gb', { weekday:  'long'});
+        if(daysThatTheyDontCommute.includes(thisDayInText) )
+        {
+                nonWorkingDays+=1;
         }
+
+        if( (isBankHoliday(dayBeingChecked.getDate(), dayBeingChecked.getMonth())) && !daysThatTheyDontCommute.includes("Bank Holidays"))
+        {
+                nonWorkingDays+=1;
+        }
+        
         i+=1;     
     }
-    // console.log(gapFromToday);
-    // console.log(`${nwd} non commuting days`);
 
-    return (gapFromToday-nwd);
+    return (gapFromToday-nonWorkingDays);
 };
 
 

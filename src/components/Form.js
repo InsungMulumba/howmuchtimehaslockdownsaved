@@ -9,10 +9,9 @@ import WfhPrepareTime from './wfhPrepareTime';
 import ResultPage from './resultPage';
 import TravelDate from './travelDate';
 import Contact from './contact';
-
 import '../styles/Form.scss';
 
-const OPTIONS = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+const OPTIONS = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday", "Bank Holidays"];
 
 class Form extends Component {
   
@@ -28,13 +27,12 @@ class Form extends Component {
       checkboxes: OPTIONS.reduce(
         (options, option) => ({
           ...options,
-          [option]: !(option==="Sunday" || option==="Saturday"),
+          [option]: !(option==="Sunday" || option==="Saturday" || option==="Bank Holidays"),
         }),
         {}
       )
     };
   }
-
 
   handleCheckboxChange = changeEvent => {
     const { name } = changeEvent.target;
@@ -61,7 +59,6 @@ class Form extends Component {
 
   render() {
     const results = this.state;
-    // const resultAnchor = <div><a href="#Result" className="anchor-button"> Result</a></div>;
     return (
       <div className="container">   
         <ResultPage 
@@ -75,9 +72,6 @@ class Form extends Component {
 
         <div id="calculator" className="calculator">
  
-        <TravelDate lockdownDate={results.lockdownDate}
-          getLockdownDate={(lockdownDate) => this.setState({lockdownDate})}
-        /> 
         <DepartCommuteTime departCommuteTimeMinutes={results.departCommuteTimeMinutes}
           getdepartCommuteTimeMinutes={(departCommuteTimeMinutes) => this.setState({departCommuteTimeMinutes})}
         />
@@ -91,17 +85,18 @@ class Form extends Component {
           getWfhPrepMinutes={(wfhPrepMinutes) => this.setState({wfhPrepMinutes})}
         />
 
-        <div className="question-section">
-          <div className="question-text">What days did you normally travel into work on?</div>
-          <div className="checkboxes-container">
-            {this.createCheckboxes()}   
+        <TravelDate lockdownDate={results.lockdownDate}
+          getLockdownDate={(lockdownDate) => this.setState({lockdownDate})}
+        /> 
+
+          <div className="question-section">
+            <div className="question-text">What days did you normally commute into work on?</div>
+            <div className="checkboxes-container">
+              {this.createCheckboxes()}   
+            </div>
           </div>
-        </div>
-
-      </div>      
+        </div>      
       <Contact/>
-
-
       </div>
     );
   };

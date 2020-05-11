@@ -2,13 +2,10 @@
 
 .social-buttons-container {
     direction: rtl;
-    top: 90px;
+    bottom: 25px;
     right: 5px;
-    position: absolute;
-    @media (min-width: 360px) {
-        top: 75px;
-    }
-    @media (min-width: 540px) {
+    position: fixed;
+    @media (min-width: 767px) {
         top: 5px;  
     }
 }

@@ -30,18 +30,13 @@ export const getNumberOfDays = (oldD,newD,daysThatTheyDontCommute) => {
     {
         const dateThatCommutingEnded = t1+((24*3600*1000)*i);
         const dayBeingChecked = new Date(dateThatCommutingEnded);
-        // console.log(yy.toLocaleString('en-gb', { weekday:  'long'}));
         const thisDayInText = dayBeingChecked.toLocaleString('en-gb', { weekday:  'long'});
-        if(daysThatTheyDontCommute.includes(thisDayInText) )
-        {
-                nonWorkingDays+=1;
-        }
+        const isBankHolidayWhereTheyPreviouslyCommuted = (isBankHoliday(dayBeingChecked.getDate(), dayBeingChecked.getMonth())) && daysThatTheyDontCommute.includes("Bank Holidays");
 
-        if( (isBankHoliday(dayBeingChecked.getDate(), dayBeingChecked.getMonth())) && !daysThatTheyDontCommute.includes("Bank Holidays"))
+        if(daysThatTheyDontCommute.includes(thisDayInText) || isBankHolidayWhereTheyPreviouslyCommuted)
         {
                 nonWorkingDays+=1;
         }
-        
         i+=1;     
     }
 

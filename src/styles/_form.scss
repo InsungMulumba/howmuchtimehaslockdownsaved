@@ -8,7 +8,7 @@
     top: 150px;
     display: flex;
     flex-direction: column;
-    @media (min-width: 414px) {
+    @media (min-width: 375px) {
         top: 215px;
     }
 
@@ -23,7 +23,6 @@
 
 .calculator {
     width: 90%;
-    margin-bottom: 20px;
     align-self: center;
 }
 

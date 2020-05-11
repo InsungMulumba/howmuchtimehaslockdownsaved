@@ -1,6 +1,6 @@
 import React from 'react';
 import logo from '../assets/logo.png';
-import '../styles/Header.scss';
+import '../styles/_header.scss';
 
 const Header = () => {
     return(
@@ -9,8 +9,8 @@ const Header = () => {
                 src = {logo} alt ={logo}
                 className="logo"
             />
-            <h1>Time Saved in lockdown</h1>
-            <span> Calculate how much time you've saved 
+            <h1>Time saved in lockdown</h1>
+            <span> Calculate how much time you've saved by
                     working remotely since lockdown began</span>
         </div>
     );  

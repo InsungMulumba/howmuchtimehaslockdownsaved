@@ -13,18 +13,25 @@
         color: white;
     }
     a:visited { 
-        color:white; }
+        color:white; 
+    }
 }
 
 .contact-text {
     padding: 4px 20px;
 }
+
 .quote {
-    padding: 4px 20px;
+    width: 90%;
+    align-self: center;
     font-style: italic;
     font-size: small;
 }
 
+.footnotes { 
+    margin-left: 20px;
+    font-size: small;
+}
 .contact-info {
     display: flex;
 

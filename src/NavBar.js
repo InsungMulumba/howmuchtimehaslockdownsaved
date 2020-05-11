@@ -2,7 +2,7 @@ import React from 'react';
 import {
   BrowserRouter
 } from "react-router-dom";
-import './styles/NavBar.scss';
+import './styles/_navbar.scss';
 
 const calcAnchor = <li><a href="#calculator"> Calculate</a></li>;
 const contact = <li><a href="#contact"> Contact</a></li>;

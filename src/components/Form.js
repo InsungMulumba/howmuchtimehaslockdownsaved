@@ -9,7 +9,7 @@ import WfhPrepareTime from './wfhPrepareTime';
 import ResultPage from './resultPage';
 import TravelDate from './travelDate';
 import Contact from './contact';
-import '../styles/Form.scss';
+import '../styles/_form.scss';
 
 const OPTIONS = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday", "Bank Holidays"];
 
@@ -95,7 +95,8 @@ class Form extends Component {
               {this.createCheckboxes()}   
             </div>
           </div>
-        </div>      
+        </div>
+        <p className="quote"> "It’s not that we have little time, but more that we waste a good deal of it." <br /> Seneca </p>      
       <Contact/>
       </div>
     );

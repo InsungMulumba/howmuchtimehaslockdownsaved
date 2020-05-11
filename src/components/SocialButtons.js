@@ -7,8 +7,8 @@ import {
     TwitterIcon
   } from 'react-share';
   import React from 'react';
-import '../styles/Form.scss';
-import '../styles/Result.scss';
+import '../styles/_form.scss';
+import '../styles/_result.scss';
 
 const SocialButtons = ({totalTimeSaved}) => {
     const socialURL="www.timesavedinlockdown.com";

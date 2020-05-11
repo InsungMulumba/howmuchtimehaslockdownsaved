@@ -31,7 +31,7 @@
         width: 90%;
         border-bottom: 1px solid lightgrey;
         text-align: center;
-        @media (min-width: 414px) {
+        @media (min-width: 375px) {
             display: block;
             padding-bottom: 10px;
         }
@@ -40,4 +40,7 @@
 }
 .logo {
     width: 50px;
+    @media (min-width: 767px) {
+        width: 70px
+    }
 }

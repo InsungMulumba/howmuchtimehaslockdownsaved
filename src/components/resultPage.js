@@ -3,8 +3,8 @@
 import React, { useState }from 'react';
 import _ from 'lodash';
 import SocialButtons from './SocialButtons';
-import '../styles/Form.scss';
-import '../styles/Result.scss';
+import '../styles/_form.scss';
+import '../styles/_result.scss';
   
 import { getMinutesDifference, getNumberOfDays, timeConvert } from './timeSavedCalculator/index'; 
 

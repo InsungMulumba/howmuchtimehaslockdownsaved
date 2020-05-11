@@ -12,13 +12,13 @@ import '../styles/_result.scss';
 
 const SocialButtons = ({totalTimeSaved}) => {
     const socialURL="www.timesavedinlockdown.com";
-    const socialText=`I have saved ${totalTimeSaved } since lockdown started, click here to find out how much you've saved`;
+    const socialText=`I have saved ${totalTimeSaved } by working remotely since lockdown started, click here to find out how much you've saved`;
 
     return(
         <div className="social-buttons-container">
         <FacebookShareButton
             url={socialURL}
-            quote={`I have saved ${totalTimeSaved } since lockdown started, click here to find out how much you've saved`}
+            quote={`I have saved ${totalTimeSaved } by working remotely since lockdown started, click here to find out how much you've saved`}
             className="social-button"
         >
             <FacebookIcon size={24} round />

@@ -6,7 +6,7 @@ import SocialButtons from './SocialButtons';
 import '../styles/_form.scss';
 import '../styles/_result.scss';
   
-import { getMinutesDifference, getNumberOfDays, timeConvert } from './timeSavedCalculator/Index'; 
+import { getMinutesDifference, getNumberOfDays, timeConvert } from './utils/Calculations'; 
 
 const ResultPage = ({departCommuteDuration,returnCommuteDuration,prepareMinutes,wPrepareMinutes,lockdownStartDate,selectedDays}) => {
     const minutesSavedEveryDay = getMinutesDifference(departCommuteDuration,returnCommuteDuration,prepareMinutes,wPrepareMinutes);

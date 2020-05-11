@@ -1,5 +1,3 @@
-
-/* eslint-disable no-console */
 import React, { Component } from 'react';
 import Checkbox from './Checkbox';
 import DepartCommuteTime from './questions/DepartCommuteTime';
@@ -9,9 +7,8 @@ import WfhPrepareTime from './questions/WfhPrepareTime';
 import ResultPage from './Result';
 import TravelDate from './questions/TravelDate';
 import Contact from './Footer';
+import { quote,days } from './utils/Constants';
 import '../styles/_form.scss';
-
-const OPTIONS = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday", "Bank Holidays"];
 
 class Form extends Component {
   
@@ -24,7 +21,7 @@ class Form extends Component {
       returnCommuteTimeMinutes: 40,
       prepareTimeMinutes: 20,
       wfhPrepMinutes: 10,
-      checkboxes: OPTIONS.reduce(
+      checkboxes: days.reduce(
         (options, option) => ({
           ...options,
           [option]: !(option==="Sunday" || option==="Saturday" || option==="Bank Holidays"),
@@ -55,37 +52,37 @@ class Form extends Component {
     />
   );
 
-  createCheckboxes = () => OPTIONS.map(this.createCheckbox);
+  createCheckboxes = () => days.map(this.createCheckbox);
 
   render() {
-    const results = this.state;
+    const questions = this.state;
     return (
       <div className="container">   
         <ResultPage 
-          departCommuteDuration={results.departCommuteTimeMinutes}
-          returnCommuteDuration={results.returnCommuteTimeMinutes}
-          prepareMinutes={results.prepareTimeMinutes}
-          wPrepareMinutes={results.wfhPrepMinutes}
-          lockdownStartDate={results.lockdownDate}
-          selectedDays={results.checkboxes}
+          departCommuteDuration={questions.departCommuteTimeMinutes}
+          returnCommuteDuration={questions.returnCommuteTimeMinutes}
+          prepareMinutes={questions.prepareTimeMinutes}
+          wPrepareMinutes={questions.wfhPrepMinutes}
+          lockdownStartDate={questions.lockdownDate}
+          selectedDays={questions.checkboxes}
         />
 
-        <div id="calculator" className="calculator">
+        <div id="questions" className="calculator">
  
-        <DepartCommuteTime departCommuteTimeMinutes={results.departCommuteTimeMinutes}
+        <DepartCommuteTime departCommuteTimeMinutes={questions.departCommuteTimeMinutes}
           getdepartCommuteTimeMinutes={(departCommuteTimeMinutes) => this.setState({departCommuteTimeMinutes})}
         />
-        <ReturnCommuteTime returnCommuteTimeMinutes={results.returnCommuteTimeMinutes}
+        <ReturnCommuteTime returnCommuteTimeMinutes={questions.returnCommuteTimeMinutes}
           getReturnCommuteTimeMinutes={(returnCommuteTimeMinutes) => this.setState({returnCommuteTimeMinutes})}
         />
-        <PrepareTime prepareTimeMinutes={results.prepareTimeMinutes}
+        <PrepareTime prepareTimeMinutes={questions.prepareTimeMinutes}
           getPrepareTimeMinutes={(prepareTimeMinutes) => this.setState({prepareTimeMinutes})}
         /> 
-        <WfhPrepareTime wfhPrepMinutes={results.wfhPrepMinutes}
+        <WfhPrepareTime wfhPrepMinutes={questions.wfhPrepMinutes}
           getWfhPrepMinutes={(wfhPrepMinutes) => this.setState({wfhPrepMinutes})}
         />
 
-        <TravelDate lockdownDate={results.lockdownDate}
+        <TravelDate lockdownDate={questions.lockdownDate}
           getLockdownDate={(lockdownDate) => this.setState({lockdownDate})}
         /> 
 
@@ -96,7 +93,7 @@ class Form extends Component {
             </div>
           </div>
         </div>
-        <p className="quote"> "It’s not that we have little time, but more that we waste a good deal of it." <br /> Seneca </p>      
+        {quote}
       <Contact/>
       </div>
     );

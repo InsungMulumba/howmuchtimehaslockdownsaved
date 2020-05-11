@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 
-import React, { useState }from 'react';
+import React from 'react';
 import _ from 'lodash';
 import SocialButtons from './SocialButtons';
 import '../styles/_form.scss';
@@ -29,10 +29,9 @@ const ResultPage = ({departCommuteDuration,returnCommuteDuration,prepareMinutes,
                             {cumulativeStatementPrefix} <span className="result-statistic"> {totalTimeSaved } </span> <span className="statement-suffix"> since start of lockdown</span>
                         </div>;
 
-    const [timeSavedResult] = useState(totalTimeSaved);
     return (
         <div className="result main-section">
-            <SocialButtons totalTimeSaved = {timeSavedResult}/>
+            <SocialButtons totalTimeSaved = {totalTimeSaved}/>
             {dailySavings}
             {totalSavings}
         </div>

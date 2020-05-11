@@ -26,9 +26,10 @@
     align-self: center;
 }
 
-.question-section {
-    margin-bottom: 35px;
+.main-section {
+    margin-bottom: $main-section-margin;
 }
+
 .result {
     align-self: center;
     width: 100%;
@@ -70,7 +71,7 @@
 
 .question-text{
     font-size: large;
-    font-family: 'Lato', sans-serif;
+    font-family: $main-font-family;
     margin-bottom: 5px;
     font-weight: 600;
     color: #2C3E50;

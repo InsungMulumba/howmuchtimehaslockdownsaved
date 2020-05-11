@@ -2,13 +2,13 @@
 /* eslint-disable no-console */
 import React, { Component } from 'react';
 import Checkbox from './Checkbox';
-import DepartCommuteTime from './departCommuteTime';
-import ReturnCommuteTime from './returnCommuteTime';
-import PrepareTime from './prepareTime';
-import WfhPrepareTime from './wfhPrepareTime';
-import ResultPage from './resultPage';
-import TravelDate from './travelDate';
-import Contact from './contact';
+import DepartCommuteTime from './questions/DepartCommuteTime';
+import ReturnCommuteTime from './questions/ReturnCommuteTime';
+import PrepareTime from './questions/PrepareTime';
+import WfhPrepareTime from './questions/WfhPrepareTime';
+import ResultPage from './Result';
+import TravelDate from './questions/TravelDate';
+import Contact from './Footer';
 import '../styles/_form.scss';
 
 const OPTIONS = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday", "Bank Holidays"];
@@ -89,7 +89,7 @@ class Form extends Component {
           getLockdownDate={(lockdownDate) => this.setState({lockdownDate})}
         /> 
 
-          <div className="question-section">
+          <div className="main-section">
             <div className="question-text">What days did you normally commute into work on?</div>
             <div className="checkboxes-container">
               {this.createCheckboxes()}   

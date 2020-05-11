@@ -6,7 +6,7 @@ import SocialButtons from './SocialButtons';
 import '../styles/_form.scss';
 import '../styles/_result.scss';
   
-import { getMinutesDifference, getNumberOfDays, timeConvert } from './timeSavedCalculator/index'; 
+import { getMinutesDifference, getNumberOfDays, timeConvert } from './timeSavedCalculator/Index'; 
 
 const ResultPage = ({departCommuteDuration,returnCommuteDuration,prepareMinutes,wPrepareMinutes,lockdownStartDate,selectedDays}) => {
     const minutesSavedEveryDay = getMinutesDifference(departCommuteDuration,returnCommuteDuration,prepareMinutes,wPrepareMinutes);
@@ -18,7 +18,6 @@ const ResultPage = ({departCommuteDuration,returnCommuteDuration,prepareMinutes,
      <span className="statement-prefix">You lose</span>;
 
     const cumulativeStatementPrefix = minutesSavedEveryDay >= 0 ? <span className="statement-prefix"> You have saved </span> : <span className="statement-prefix"> You have lost </span>; 
-
 
     const dailySavings = <div className="result-statement" id="Result">
                             {dailyStatementPrefix}
@@ -32,7 +31,7 @@ const ResultPage = ({departCommuteDuration,returnCommuteDuration,prepareMinutes,
 
     const [timeSavedResult] = useState(totalTimeSaved);
     return (
-        <div className="result question-section">
+        <div className="result main-section">
             <SocialButtons totalTimeSaved = {timeSavedResult}/>
             {dailySavings}
             {totalSavings}

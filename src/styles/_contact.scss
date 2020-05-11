@@ -5,7 +5,7 @@
 .contact-container {
     align-self: center;
     font-size: large;
-    font-family: 'Lato', sans-serif;
+    font-family: $main-font-family;
     background-color: $main-theme--dark;
     color: white;
 
@@ -19,6 +19,7 @@
 
 .contact-text {
     padding: 4px 20px;
+    margin: 0;
 }
 
 .quote {

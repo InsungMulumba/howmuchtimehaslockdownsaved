@@ -14,7 +14,7 @@ const PrepareTime = ({prepareTimeMinutes, getPrepareTimeMinutes}) => {
           onChange={getPrepareTimeMinutes}
           step={5}
           min={5}
-          max={60}
+          max={120}
         />           
       <div>{prepareTimeMinutes} minutes</div> 
       </div>

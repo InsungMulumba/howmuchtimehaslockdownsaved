@@ -14,7 +14,7 @@ const WfhPrepareTime = ({wfhPrepMinutes, getWfhPrepMinutes}) => {
         onChange={getWfhPrepMinutes}
         step={5}
         min={5}
-        max={75}
+        max={120}
       />           
     <div>{wfhPrepMinutes} minutes</div> 
     </div>

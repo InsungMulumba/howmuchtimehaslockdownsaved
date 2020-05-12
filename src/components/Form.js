@@ -17,10 +17,10 @@ class Form extends Component {
 
     this.state = {
       lockdownDate: new Date(2020, 2, 23),
-      departCommuteTimeMinutes: 40,
-      returnCommuteTimeMinutes: 40,
-      prepareTimeMinutes: 20,
-      wfhPrepMinutes: 10,
+      departCommuteTimeMinutes: 45,
+      returnCommuteTimeMinutes: 45,
+      prepareTimeMinutes: 30,
+      wfhPrepMinutes: 15,
       checkboxes: days.reduce(
         (options, option) => ({
           ...options,

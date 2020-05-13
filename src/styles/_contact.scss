@@ -20,7 +20,7 @@
 .contact-text {
     padding: 4px 20px;
     margin: 0;
-    font-size: smaller;
+    font-size: small;
 }
 
 .quote {
@@ -37,9 +37,14 @@
 }
 .contact-info {
     display: flex;
+    flex-direction: row-reverse;
+
+    @media(min-width: 767px) {
+        height: 40px;
+    }
 
     svg {
-        height: 120px;
+        height: 80px;
         display: none;
         @media(min-width: 767px) {
             display: block;

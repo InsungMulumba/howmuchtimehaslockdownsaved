@@ -2,17 +2,17 @@ SPA for user to calculate how much time they have saved since beginning of 2020 
 
 http://www.timesavedinlockdown.com/
 
-## ReactJS, SCSS, Jest, Heroku
+Created using ReactJS, SCSS, Jest, Heroku
 
-# install dependencies
+### install dependencies
 $ npm install
 
-# serve at localhost:3000
+### serve at localhost:3000
 $ node server.js
 
-# Run Tests
+### Run Tests
 $ jest --silent
 
-# build for production and launch server
+### build for production and launch server
 $ npm build
 $ npm start

@@ -4,15 +4,17 @@ http://www.timesavedinlockdown.com/
 
 Created using ReactJS, SCSS, Jest, Heroku
 
-### install dependencies
+```bash
+# install dependencies
 $ npm install
 
-### serve at localhost:3000
+# serve at localhost:3000
 $ node server.js
 
-### Run Tests
+# Run Tests
 $ jest --silent
 
-### build for production and launch server
+# build for production and launch server
 $ npm build
 $ npm start
+```

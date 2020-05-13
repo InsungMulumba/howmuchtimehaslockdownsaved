@@ -29,7 +29,7 @@
   "scripts": {
     "start": "node server.js",
     "build": "react-scripts build",
-    "test": "jest --transformIgnorePatterns \"node_modules/(?!your-module-name)/\"",
+    "test": "jest",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

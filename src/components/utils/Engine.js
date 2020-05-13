@@ -18,17 +18,18 @@ const isBankHoliday = (date,month) => {
     return false;
  };
 
-export const getNumberOfDays = (oldD,newD,daysThatTheyDontCommute) => {
-    // console.log(daysThatTheyDontCommute);
+
+export const getNumberOfWorkingDays = (oldD,newD,daysThatTheyDontCommute) => {
+    const msToDayConversion = (24*3600*1000);
     const t2 = newD.getTime();
     const t1 = oldD.getTime();
-    const gapFromToday = Math.ceil((t2-t1)/(24*3600*1000)+1);
+    const gapFromToday = Math.ceil((t2-t1)/(msToDayConversion)+1);
     let i=0;
     let nonWorkingDays = 0;
 
     while(i<=gapFromToday)
     {
-        const dateThatCommutingEnded = t1+((24*3600*1000)*i);
+        const dateThatCommutingEnded = t1+((msToDayConversion)*i);
         const dayBeingChecked = new Date(dateThatCommutingEnded);
         const thisDayInText = dayBeingChecked.toLocaleString('en-gb', { weekday:  'long'});
         const isBankHolidayWhereTheyPreviouslyCommuted = (isBankHoliday(dayBeingChecked.getDate(), dayBeingChecked.getMonth())) && daysThatTheyDontCommute.includes("Bank Holidays");
@@ -44,8 +45,8 @@ export const getNumberOfDays = (oldD,newD,daysThatTheyDontCommute) => {
 };
 
 
-export const timeConvert = (n) => {
-    const num = n;
+export const timeConvert = (totalMinutesDifference) => {
+    const num = totalMinutesDifference;
     const hours = (num / 60);
     const rhours = Math.floor(hours);
     const minutes = (hours - rhours) * 60;
@@ -53,4 +54,4 @@ export const timeConvert = (n) => {
     return `${ Math.abs(rhours)  } hour(s) and ${  rminutes  } minute(s)`;
 };
 
-export default {getMinutesDifference, getNumberOfDays, timeConvert};
+export default {getMinutesDifference, getNumberOfWorkingDays, timeConvert};

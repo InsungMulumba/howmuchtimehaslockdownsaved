@@ -6,13 +6,13 @@ import SocialButtons from './SocialButtons';
 import '../styles/_form.scss';
 import '../styles/_result.scss';
   
-import { getMinutesDifference, getNumberOfDays, timeConvert } from "./utils/Engine";
+import { getMinutesDifference, getNumberOfWorkingDays, timeConvert } from "./utils/Engine";
 
 const ResultPage = ({departCommuteDuration,returnCommuteDuration,prepareMinutes,wPrepareMinutes,lockdownStartDate,selectedDays}) => {
     const minutesSavedEveryDay = getMinutesDifference(departCommuteDuration,returnCommuteDuration,prepareMinutes,wPrepareMinutes);
     const today = new Date();
     const active = _.keys(_.omitBy(selectedDays));
-    const totalTimeSaved = timeConvert((getNumberOfDays(lockdownStartDate,today,active)) * minutesSavedEveryDay);
+    const totalTimeSaved = timeConvert((getNumberOfWorkingDays(lockdownStartDate,today,active)) * minutesSavedEveryDay);
 
     const dailyStatementPrefix = minutesSavedEveryDay >= 0 ? <span className="statement-prefix">You save</span> :
      <span className="statement-prefix">You lose</span>;

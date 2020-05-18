@@ -8,6 +8,9 @@
     font-family: $main-font-family;
     background-color: $main-theme--dark;
     color: white;
+    @media(min-width: 767px) {
+        width: 100%;
+    }
 
     a {
         color: white;
@@ -41,6 +44,7 @@
 
     @media(min-width: 767px) {
         height: 40px;
+        justify-content: flex-end;
     }
 
     svg {

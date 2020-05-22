@@ -1,8 +1,0 @@
-@import url(https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap);
-@import url(https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap);
-@import url(https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap);
-@import url(https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap);
-.bg{height:300px;width:100%;background-color:aliceblue}.container{background-color:#ebf0f6;position:absolute;width:100%;top:150px;display:flex;flex-direction:column}@media (min-width: 375px){.container{top:215px}}.container .react-datepicker-popper{z-index:999}.date-result{margin-top:-20px}.calculator{width:90%;align-self:center}.main-section{margin-bottom:35px}.result{align-self:center;width:100%;background-color:aliceblue;position:-webkit-sticky;position:sticky;top:0;z-index:999;padding-top:10px}.result-statement{font-size:16px;text-align:center;margin-bottom:15px;flex-direction:column;padding-left:10px;padding-right:10px}@media (min-width: 767px){.result-statement{display:flex;justify-content:center;flex-direction:row;align-items:baseline}}.result-statistic{font-size:16px;font-weight:600;margin-left:4px;margin-right:4px;color:#2C3E50}@media (min-width: 767px){.result-statistic{font-size:36px}}.question-text{font-size:large;font-family:"Lato",sans-serif;margin-bottom:5px;font-weight:600;color:#2C3E50}.calendar{width:50px;height:50px;background-size:contain}
-
-.bg{height:300px;width:100%;background-color:aliceblue}.social-buttons-container{bottom:25px;right:5px;position:fixed}@media (min-width: 767px){.social-buttons-container{top:5px}}.social-button{background-color:transparent;border:none;padding:0px;font:"Lato",sans-serif;color:inherit;cursor:pointer}
-

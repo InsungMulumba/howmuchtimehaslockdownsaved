@@ -2,6 +2,9 @@ const webpack = require('webpack');
 // const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
 // const TerserPlugin = require('terser-webpack-plugin');
+// const HtmlWebPackPlugin = require("html-webpack-plugin");
+// https://www.valentinog.com/blog/babel/
+// https://www.freecodecamp.org/news/part-1-react-app-from-scratch-using-webpack-4-562b1d231e75/
 
 const isDevelopment = process.env.NODE_ENV === 'development';
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');

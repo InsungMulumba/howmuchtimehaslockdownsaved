@@ -27,7 +27,7 @@
   },
   "scripts": {
     "start": "node server.js",
-    "build": "webpack --mode production --config webpack.config.js",
+    "build": "react-scripts build",
     "test": "jest",
     "eject": "react-scripts eject"
   },

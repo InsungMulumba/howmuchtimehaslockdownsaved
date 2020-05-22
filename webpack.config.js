@@ -1,7 +1,7 @@
 const webpack = require('webpack');
 // const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
-const TerserPlugin = require('terser-webpack-plugin');
+// const TerserPlugin = require('terser-webpack-plugin');
 
 const isDevelopment = process.env.NODE_ENV === 'development';
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
@@ -9,7 +9,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 module.exports = {
     entry: {
         index: './src/index.js',
-        result: './src/components/Result.js',
+        result: './src/components/Result.js'
     },
     module: {
       rules: [
@@ -70,9 +70,6 @@ module.exports = {
           }
       ]
     },
-    // devServer: {
-    //     contentBase: './dist',
-    // },
     plugins: [
         new webpack.DefinePlugin({
           'process.env': {
@@ -98,10 +95,9 @@ module.exports = {
         splitChunks: {
             chunks: 'all'
         },
-        minimize: true,
-        minimizer: [new TerserPlugin()],
+        minimize: true
     },
     resolve: {
         extensions: [".js", ".jsx"]
-      }
+    },
   };
